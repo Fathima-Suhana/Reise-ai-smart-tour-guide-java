@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reise: Your AI Smart Tour Guide</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🧭 Reise: Your AI Smart Tour Guide</h1>
+  <p class="sub">Pick a country, set your time and interests, and get an itinerary that adapts live.</p>
+  <div class="grid">
+    <div class="col">
+      <div class="card">
+        <h2>Your trip</h2>
+        <label for="ctry">Country</label><select id="ctry"></select>
+        <label for="start">Starting from</label><select id="start"></select>
+        <label for="hrs">Time available: <b id="hv"></b></label>
+        <input type="range" id="hrs" min="1" max="10" step="0.5" value="5">
+        <label for="t0">Start time</label><select id="t0"></select>
+        <label>Interests</label><div class="chips" id="chips"></div>
+      </div>
+      <div class="card" id="info"></div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <h2>Map</h2>
+        <div id="map"></div>
+        <div class="chips top">
+          <button class="btnp" id="gps">Follow my GPS</button>
+          <button class="btn" id="demo">🎬 Demo my plan</button>
+        </div>
+        <div class="meta" id="msg">GPS follows your real position. Demo plays a sped-up preview of the plan.</div>
+      </div>
+      <div class="card">
+        <h2>Dynamic itinerary</h2>
+        <div class="sum" id="sum"></div><div id="list"></div><div class="note" id="note"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
